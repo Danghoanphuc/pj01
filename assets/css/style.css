@@ -9,19 +9,152 @@ body {
   background-color: #f4f4f4;
   font-family: "Manrope", sans-serif;
   color: #333;
+  padding-top: 80px;
 }
 /* ============ common ============= */
 a {
   text-decoration: none;
   color: inherit;
 }
+.btn {
+  display: inline-block;
+  padding: 11px 16px;
+  background: linear-gradient(to right, #4f39f6, #9810fa, #e60076);
+  color: white;
+  border-radius: 16px;
+  font-size: 1.4rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.5;
+}
 /* =========== header ========== */
+.header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  align-items: center;
+}
 .header .header-body {
   display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
 }
 .header-nav {
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-logo {
+  width: 18rem; /* Thay đổi kích thước chiều rộng */
+  height: auto; /* Đảm bảo tỷ lệ hình ảnh */
 }
 .header-nav ul {
   display: flex;
+  justify-content: center; /* Căn giữa theo trục ngang */
+  align-items: center; /* Căn giữa theo trục dọc */
 }
+.main-content {
+  max-width: calc(100% - 48px);
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-nav a {
+  display: flex;
+  width: 97px;
+  height: 24px;
+  padding: 8px 1px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  position: relative;
+}
+.header-nav li.active a,
+.header-nav a:hover {
+  text-shadow: 0.5px 0px 0px currentColor;
+}
+.header-nav li.active a::after {
+  display: block;
+  background: black;
+  font-weight: 600;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 14px;
+}
+/* ============= hero 1 ============ */
+.hero {
+  width: 100%;
+  background: #fff;
+  padding: 64px 0 32px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+  gap: 48px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.btn-header {
+  padding: 0.5rem 1.4rem;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  background: #020202da;
+  font-weight: 500;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(80, 39, 246, 0.12), 0 2px 8px rgba(0,0,0,0.08);
+  border: 4px solid transparent;
+  background: linear-gradient(135deg, #4f39f6 0%, #9810fa 50%, #e60076 100%) border-box;
+  background-clip: padding-box, border-box;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+
+  .hero-video:hover {
+    box-shadow: 0 16px 48px rgba(80, 39, 246, 0.18), 0 4px 16px rgba(0,0,0,0.12);
+    transform: scale(1.03) rotate(-1deg);
+    border-color: #9810fa;
+  }
